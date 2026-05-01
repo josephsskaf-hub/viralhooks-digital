@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViralHookDB — 120 Viral Hooks for Short-Form Creators</title>
+<meta name="description" content="120 copy-paste viral hooks for short-form creators. 12 niches, proven formulas, ready to use. Stop the scroll instantly.">
+<meta property="og:title" content="ViralHookDB — 120 Viral Hooks for Short-Form Creators">
+<meta property="og:description" content="120 copy-paste viral hooks for short-form creators. 12 niches, proven formulas.">
+<meta property="og:url" content="https://viralhooks.digital">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://viralhooks.digital">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --surface2: #1c1c26;
+    --border: #2a2a3a;
+    --accent: #7c5cfc;
+    --accent2: #5c8afc;
+    --gold: #f5c842;
+    --text: #e8e8f0;
+    --muted: #7a7a9a;
+    --green: #3dd68c;
+    --red: #fc5c5c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+  /* NAV */
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+  .logo { font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; }
+  .logo span { font-size: 0.75rem; background: var(--accent); -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: #fff; padding: 2px 7px; border-radius: 99px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+  .nav-right { display: flex; gap: 12px; align-items: center; }
+  .btn-upgrade { background: var(--accent); color: #fff; border: none; padding: 9px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.875rem; transition: opacity .2s; }
+  .btn-upgrade:hover { opacity: 0.85; }
+  .btn-fav { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 9px 16px; border-radius: 8px; cursor: pointer; font-size: 0.875rem; transition: all .2s; }
+  .btn-fav:hover { color: var(--text); border-color: var(--accent); }
+
+  /* HERO */
+  .hero { text-align: center; padding: 64px 32px 40px; }
+  .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.1; margin-bottom: 16px; }
+  .hero h1 span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { color: var(--muted); font-size: 1.1rem; max-width: 560px; margin: 0 auto 32px; }
+  .stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* SEARCH */
+  .search-bar { max-width: 640px; margin: 32px auto 0; padding: 0 32px; }
+  .search-input { width: 100%; padding: 14px 20px; background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-size: 1rem; outline: none; transition: border-color .2s; }
+  .search-input:focus { border-color: var(--accent); }
+  .search-input::placeholder { color: var(--muted); }
+
+  /* TABS */
+  .tabs-wrapper { padding: 24px 32px 0; overflow-x: auto; }
+  .tabs { display: flex; gap: 8px; min-width: max-content; }
+  .tab { padding: 8px 18px; border-radius: 99px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; font-size: 0.875rem; transition: all .2s; white-space: nowrap; }
+  .tab:hover { color: var(--text); }
+  .tab.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+  /* GRID */
+  .grid-section { padding: 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+
+  /* CARD */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; position: relative; transition: border-color .2s; }
+  .card:hover { border-color: var(--accent); }
+  .card.locked { filter: none; }
+  .card.locked .card-text { filter: blur(5px); user-select: none; }
+  .card-niche { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+  .card-text { font-size: 0.95rem; line-height: 1.6; color: var(--text); margin-bottom: 16px; }
+  .card-actions { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+  .btn-copy { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 7px 16px; border-radius: 7px; cursor: pointer; font-size: 0.8rem; transition: all .2s; }
+  .btn-copy:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn-copy.copied { background: var(--green); border-color: var(--green); color: #fff; }
+  .btn-heart { background: transparent; border: none; color: var(--muted); cursor: pointer; font-size: 1.1rem; padding: 4px; transition: color .2s; }
+  .btn-heart:hover, .btn-heart.active { color: var(--red); }
+  .lock-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 12px; background: rgba(10,10,15,0.7); gap: 10px; }
+  .lock-icon { font-size: 1.5rem; }
+  .btn-unlock { background: var(--accent); color: #fff; border: none; padding: 8px 18px; border-radius: 7px; cursor: pointer; font-size: 0.8rem; font-weight: 600; }
+  .btn-unlock:hover { opacity: 0.85; }
+
+  /* PRICING */
+  .pricing-section { padding: 64px 32px; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .pricing-section h2 { text-align: center; font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+  .pricing-section p { text-align: center; color: var(--muted); margin-bottom: 40px; }
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+  .plan { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; text-align: center; position: relative; transition: border-color .2s; }
+  .plan:hover { border-color: var(--accent); }
+  .plan.popular { border-color: var(--accent); }
+  .plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 12px; border-radius: 99px; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+  .plan-name { font-size: 1rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .plan-price { font-size: 2.5rem; font-weight: 900; margin-bottom: 4px; }
+  .plan-price span { font-size: 1rem; color: var(--muted); font-weight: 400; }
+  .plan-desc { font-size: 0.82rem; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+  .plan-features { list-style: none; text-align: left; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .plan-features li { font-size: 0.85rem; color: var(--text); display: flex; gap: 8px; }
+  .plan-features li::before { content: "✓"; color: var(--green); font-weight: 700; }
+  .btn-plan { width: 100%; padding: 12px; border-radius: 9px; border: none; cursor: pointer; font-weight: 700; font-size: 0.95rem; transition: opacity .2s; text-decoration: none; display: block; }
+  .btn-plan-free { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+  .btn-plan-paid { background: var(--accent); color: #fff; }
+  .btn-plan:hover { opacity: 0.85; }
+
+  /* MODAL */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; max-width: 640px; width: 100%; max-height: 80vh; overflow-y: auto; }
+  .modal h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 20px; }
+  .modal-close { float: right; background: none; border: none; color: var(--muted); font-size: 1.5rem; cursor: pointer; line-height: 1; }
+  .fav-empty { color: var(--muted); text-align: center; padding: 32px; }
+
+  /* FOOTER */
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* UNLOCK MODAL */
+  #unlockModal .modal { text-align: center; }
+  #unlockModal h3 { margin-bottom: 8px; }
+  #unlockModal p { color: var(--muted); margin-bottom: 24px; font-size: 0.95rem; }
+  .unlock-plans { display: flex; flex-direction: column; gap: 12px; }
+  .unlock-plan-btn { display: block; padding: 14px 20px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; transition: opacity .2s; }
+  .unlock-plan-btn:hover { opacity: 0.85; }
+  .unlock-plan-btn.gold { background: linear-gradient(135deg, #f5c842, #f09a2a); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">ViralHookDB <span>BETA</span></div>
+  <div class="nav-right">
+    <button class="btn-fav" onclick="openFavModal()">⭐ Favorites (<span id="favCount">0</span>)</button>
+    <button class="btn-upgrade" onclick="scrollToPricing()">Upgrade ↑</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>120 Hooks That <span>Stop the Scroll</span></h1>
+  <p>Copy-paste viral hooks for short-form creators. 12 niches, proven formulas, ready to use.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">120</div><div class="stat-label">Total Hooks</div></div>
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">Niches</div></div>
+    <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Views Potential</div></div>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-bar">
+  <input type="text" class="search-input" id="searchInput" placeholder="🔍 Search hooks..." oninput="filterHooks()">
+</div>
+
+<!-- TABS -->
+<div class="tabs-wrapper">
+  <div class="tabs" id="tabsContainer">
+    <button class="tab active" onclick="setTab('all', this)">All (120)</button>
+    <button class="tab" onclick="setTab('fitness', this)">💪 Fitness</button>
+    <button class="tab" onclick="setTab('money', this)">💰 Money</button>
+    <button class="tab" onclick="setTab('motivation', this)">🔥 Motivation</button>
+    <button class="tab" onclick="setTab('ai', this)">🤖 AI & Tech</button>
+    <button class="tab" onclick="setTab('relationships', this)">❤️ Relationships</button>
+    <button class="tab" onclick="setTab('mindset', this)">🧠 Mindset</button>
+    <button class="tab" onclick="setTab('history', this)">📜 History</button>
+    <button class="tab" onclick="setTab('mystery', this)">🔮 Mystery</button>
+    <button class="tab" onclick="setTab('food', this)">🍕 Food</button>
+    <button class="tab" onclick="setTab('travel', this)">✈️ Travel</button>
+    <button class="tab" onclick="setTab('business', this)">📈 Business</button>
+    <button class="tab" onclick="setTab('science', this)">🔬 Science</button>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="grid-section">
+  <div class="grid" id="hookGrid"></div>
+</div>
+
+<!-- PRICING -->
+<div class="pricing-section" id="pricing">
+  <h2>Unlock All 120 Hooks</h2>
+  <p>Start free. Upgrade when you're ready to dominate your niche.</p>
+  <div class="plans">
+
+    <div class="plan">
+      <div class="plan-name">Free</div>
+      <div class="plan-price">$0</div>
+      <div class="plan-desc">Preview 10 hooks across all niches</div>
+      <ul class="plan-features">
+        <li>10 hooks (preview)</li>
+        <li>All 12 niches</li>
+        <li>Copy to clipboard</li>
+      </ul>
+      <a href="#" class="btn-plan btn-plan-free" onclick="event.preventDefault()">Current Plan</a>
+    </div>
+
+    <div class="plan popular" style="max-width:420px;margin:0 auto;">
+      <div class="plan-badge">🔥 Best Value</div>
+      <div class="plan-name">Full Access</div>
+      <div class="plan-price">$15 <span>one-time</span></div>
+      <div class="plan-desc">All 120 viral hooks across all 12 niches</div>
+      <ul class="plan-features">
+        <li>All 120 hooks unlocked instantly</li>
+        <li>All 12 niches included</li>
+        <li>Copy, favorites &amp; export</li>
+        <li>Lifetime access — no subscription</li>
+        <li>Future hook packs included</li>
+      </ul>
+      <a href="https://buy.stripe.com/aFacN5dNbgY7dizgVogjC05" class="btn-plan btn-plan-paid" target="_blank">Get Full Access →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <a href="https://viralhooks.digital" style="color:var(--accent);text-decoration:none">viralhooks.digital</a> · Sister product of <a href="https://ShortsForgeAI.com" target="_blank">ShortsForgeAI</a></p>
+</footer>
+
+<!-- FAVORITES MODAL -->
+<div class="modal-overlay" id="favModal" onclick="closeFavModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeFavModal()">×</button>
+    <h3>⭐ Your Favorites</h3>
+    <div id="favList"></div>
+  </div>
+</div>
+
+<!-- UNLOCK MODAL -->
+<div class="modal-overlay" id="unlockModal" onclick="closeUnlockModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeUnlockModal()">×</button>
+    <h3>🔒 Unlock All 120 Hooks</h3>
+    <p>Choose a plan and get instant access to every hook in the database.</p>
+    <div class="unlock-plans">
+      <a href="https://buy.stripe.com/aFacN5dNbgY7dizgVogjC05" class="unlock-plan-btn gold" target="_blank">Full Access — $15 one-time · All 120 hooks ⭐</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const HOOKS = [
+  // FITNESS (10)
+  { id:1, niche:'fitness', text:"I lost 20 lbs in 60 days without stepping inside a gym once. Here's the exact method nobody talks about." },
+  { id:2, niche:'fitness', text:"The fitness advice you've been following your entire life is scientifically wrong. And this study proves it." },
+  { id:3, niche:'fitness', text:"Your body burns fat for 48 hours after this one specific type of workout. And it takes less than 10 minutes." },
+  { id:4, niche:'fitness', text:"Professional athletes do NOT stretch before training. Here's what they actually do instead." },
+  { id:5, niche:'fitness', text:"Eating more food made me lose more weight. I know that sounds insane — let me show you the science." },
+  { id:6, niche:'fitness', text:"The $0 diet plan that Olympic runners have been quietly using since the 1980s." },
+  { id:7, niche:'fitness', text:"I worked out every single day for a full year. This is the one thing I wish someone had told me on day one." },
+  { id:8, niche:'fitness', text:"Stop doing sit-ups. Trainers who actually understand anatomy haven't done them in years — here's why." },
+  { id:9, niche:'fitness', text:"This man is 73 years old and has 6% body fat. His daily routine will genuinely shock you." },
+  { id:10, niche:'fitness', text:"The real reason you can't lose belly fat has nothing to do with food or exercise. Watch this." },
+
+  // MONEY (10)
+  { id:11, niche:'money', text:"I made $12,000 in one month using a method that requires zero experience, zero capital, and zero followers." },
+  { id:12, niche:'money', text:"The richest 1% don't save money. They understand one rule that nobody teaches in school." },
+  { id:13, niche:'money', text:"This 22-year-old earns $40K a month from her phone. She started 8 months ago with $200." },
+  { id:14, niche:'money', text:"Amazon is quietly paying people $30 an hour to do this from home — and most people don't even know it exists." },
+  { id:15, niche:'money', text:"I quit my 9-to-5 using a side hustle that pays me while I sleep. Here's how I set it up." },
+  { id:16, niche:'money', text:"If you have $500 right now, here are 5 moves that can turn it into $5,000 by next month." },
+  { id:17, niche:'money', text:"The bank doesn't want you to know this savings trick. It's completely legal and takes 3 minutes to set up." },
+  { id:18, niche:'money', text:"Every person I know who got wealthy did these 3 things before age 30. Let me save you the decade." },
+  { id:19, niche:'money', text:"Passive income is real. But 99% of people are chasing the wrong version of it. Here's the actual path." },
+  { id:20, niche:'money', text:"This app pays you to do things you're already doing every single day. I made $800 last month doing nothing extra." },
+
+  // MOTIVATION (10)
+  { id:21, niche:'motivation', text:"You're not lazy. You're just doing the wrong things at the wrong time of day. Let me explain." },
+  { id:22, niche:'motivation', text:"The most successful person you know wakes up and does one thing first. It takes exactly 2 minutes." },
+  { id:23, niche:'motivation', text:"Stop waiting until you feel ready. Nobody who ever changed their life felt ready. Here's what they did instead." },
+  { id:24, niche:'motivation', text:"I used to procrastinate everything. One simple mindset shift made me more productive than I've ever been." },
+  { id:25, niche:'motivation', text:"The people who seem unstoppable all share one habit. It's not waking up at 5am. Here's what it actually is." },
+  { id:26, niche:'motivation', text:"You have the same 24 hours as Elon Musk, LeBron James, and Oprah Winfrey. This is how they use them differently." },
+  { id:27, niche:'motivation', text:"Your environment is silently making you less productive. Change this one thing in your room and watch what happens." },
+  { id:28, niche:'motivation', text:"Discipline is overrated. Here's the actual science behind why some people never need willpower to succeed." },
+  { id:29, niche:'motivation', text:"I asked 100 millionaires what they would do if they lost everything today. Every single one said the same thing." },
+  { id:30, niche:'motivation', text:"The reason most people never reach their goals is shockingly simple — and has nothing to do with effort." },
+
+  // AI & TECH (10)
+  { id:31, niche:'ai', text:"This free AI tool does in 3 minutes what used to take me a full 8-hour workday. I'm genuinely not going back." },
+  { id:32, niche:'ai', text:"ChatGPT is not even close to the most powerful AI tool available right now. Here are the 5 that actually are." },
+  { id:33, niche:'ai', text:"I used AI to build a business that makes $3,000 a month. From scratch. In 72 hours. Here's the exact process." },
+  { id:34, niche:'ai', text:"The jobs that are definitely going to be automated in the next 3 years — and the ones that are completely safe." },
+  { id:35, niche:'ai', text:"This AI can clone your voice perfectly in under 60 seconds. The implications of this are terrifying and amazing." },
+  { id:36, niche:'ai', text:"Stop using Google for research. These 4 AI tools find better information 10 times faster. I use them every day." },
+  { id:37, niche:'ai', text:"I automated my entire content schedule with one AI tool. Now I post 5 Shorts every single day without touching an editor." },
+  { id:38, niche:'ai', text:"The AI revolution isn't coming. It's already here. And most people are completely unprepared for what's next." },
+  { id:39, niche:'ai', text:"This AI writes better landing pages than most professional copywriters. And it's completely free to use right now." },
+  { id:40, niche:'ai', text:"I replaced my entire tech stack with free AI tools and saved $2,400 a year. Here's exactly what I deleted." },
+
+  // RELATIONSHIPS (10)
+  { id:41, niche:'relationships', text:"Therapists use this one sentence to immediately de-escalate any argument. Once you know it, you'll use it everywhere." },
+  { id:42, niche:'relationships', text:"People who are genuinely well-liked all share the same rare habit. It takes 10 seconds and costs nothing." },
+  { id:43, niche:'relationships', text:"The reason most relationships silently fall apart has nothing to do with love, trust, or communication." },
+  { id:44, niche:'relationships', text:"I studied 50 couples that have been happily together for over 30 years. They all had one thing in common." },
+  { id:45, niche:'relationships', text:"Body language experts can tell within 90 seconds whether a couple will stay together. Here are the signs." },
+  { id:46, niche:'relationships', text:"You can tell someone is secretly attracted to you by watching for this one unconscious behavior." },
+  { id:47, niche:'relationships', text:"The most important conversation to have before getting into any serious relationship — and most people never have it." },
+  { id:48, niche:'relationships', text:"Lonely people make this same mistake in every single social interaction. Here's what it is and how to stop." },
+  { id:49, niche:'relationships', text:"This psychological trick makes people immediately like and trust you more. Used by every top negotiator on the planet." },
+  { id:50, niche:'relationships', text:"The difference between couples who get stronger over time and those who fall apart usually comes down to one habit." },
+
+  // MINDSET (10)
+  { id:51, niche:'mindset', text:"Your brain makes 35,000 decisions every single day. Most of them are working against you. Here's how to fix that." },
+  { id:52, niche:'mindset', text:"The way you talk to yourself is physically changing the structure of your brain. This is not motivational fluff — it's neuroscience." },
+  { id:53, niche:'mindset', text:"I spent 6 months studying the daily routines of billionaires. This is the one habit almost all of them share." },
+  { id:54, niche:'mindset', text:"Anxiety is your brain lying to you in a very specific way. Once you understand the lie, you can instantly stop it." },
+  { id:55, niche:'mindset', text:"People who achieve their goals think about failure differently than everyone else. Here's the exact difference." },
+  { id:56, niche:'mindset', text:"Your comfort zone is smaller than you think — and there's a specific technique to expand it without any discomfort." },
+  { id:57, niche:'mindset', text:"The most mentally strong people I've ever met all have this one response when things go wrong. It's three words." },
+  { id:58, niche:'mindset', text:"Overthinking isn't a personality flaw. It's a specific brain pattern — and science has found the exact way to interrupt it." },
+  { id:59, niche:'mindset', text:"I journal every single morning and it completely changed my mental clarity. But not in the way you'd expect." },
+  { id:60, niche:'mindset', text:"The secret to staying calm in any high-pressure situation — used by Navy SEALs, surgeons, and top athletes worldwide." },
+
+  // HISTORY (10)
+  { id:61, niche:'history', text:"Ancient Rome had fast food restaurants on every street corner. The menus will completely blow your mind." },
+  { id:62, niche:'history', text:"This man single-handedly changed the outcome of World War II — and almost nobody knows his name." },
+  { id:63, niche:'history', text:"The real reason the Titanic sank has nothing to do with the iceberg. The truth has been hidden for over a century." },
+  { id:64, niche:'history', text:"The Egyptian pyramids were built with a level of engineering precision that modern architects still can't fully explain." },
+  { id:65, niche:'history', text:"There was a war in history that lasted exactly 38 minutes. It is officially the shortest war ever fought." },
+  { id:66, niche:'history', text:"Scientists just discovered a lost civilization that completely rewrites our understanding of human history." },
+  { id:67, niche:'history', text:"The Roman soldier who survived three of history's most catastrophic battles — and what he witnessed at each one." },
+  { id:68, niche:'history', text:"The bizarre true story of how a single letter accidentally started the First World War." },
+  { id:69, niche:'history', text:"Medieval people were not as different from us as you think. Some of their daily habits would fit perfectly today." },
+  { id:70, niche:'history', text:"The most powerful woman in ancient history ruled for 21 years and is almost completely absent from the history books." },
+
+  // MYSTERY (10)
+  { id:71, niche:'mystery', text:"A ship was found in the middle of the ocean in 1872. Every person onboard had vanished. There was still food on the plates." },
+  { id:72, niche:'mystery', text:"Scientists have been studying this lake for 30 years and they still cannot explain what lives in the water below the ice." },
+  { id:73, niche:'mystery', text:"There is a manuscript that has been studied by the world's best cryptographers for 600 years. Not a single word has been decoded." },
+  { id:74, niche:'mystery', text:"This ancient city was discovered completely intact beneath the ocean — and nobody can explain how it got there." },
+  { id:75, niche:'mystery', text:"The government has declassified thousands of UFO documents. These 3 cases are the ones nobody is talking about." },
+  { id:76, niche:'mystery', text:"A man showed up in Tokyo in 1954 with a passport from a country that has never existed. This is a documented fact." },
+  { id:77, niche:'mystery', text:"There is a sound at the bottom of the Pacific Ocean that scientists recorded in 1997. They still haven't explained its source." },
+  { id:78, niche:'mystery', text:"This painting has been studied by art experts for 500 years and contains a hidden message that still hasn't been solved." },
+  { id:79, niche:'mystery', text:"The last message sent from this missing plane contained only three numbers. Air traffic control still hasn't figured out what they mean." },
+  { id:80, niche:'mystery', text:"An entire town in Canada disappeared overnight in 1930. There was food on the table, fires still burning, and no bodies." },
+
+  // FOOD (10)
+  { id:81, niche:'food', text:"McDonald's uses a very specific psychological trick on their menu to make you spend 40% more money every single visit." },
+  { id:82, niche:'food', text:"The most expensive ingredient in the world costs $10,000 per kilogram. Here's what it actually tastes like." },
+  { id:83, niche:'food', text:"I tried cooking every meal for 30 days using only ingredients from a $50 weekly budget. Here's what actually worked." },
+  { id:84, niche:'food', text:"Professional chefs never add salt the way home cooks do. This one technique changes everything about your cooking." },
+  { id:85, niche:'food', text:"The food you think is healthy is often worse for you than junk food. These 5 examples will genuinely shock you." },
+  { id:86, niche:'food', text:"There's a restaurant in Tokyo with a 3-year waitlist. A retired chef told me exactly what makes it worth the wait." },
+  { id:87, niche:'food', text:"Ancient Romans ate a sauce so disgusting it was literally illegal to make near cities. Food historians are obsessed with it." },
+  { id:88, niche:'food', text:"I made the viral $2 pasta that broke the internet. Here's my honest review after making it 7 times." },
+  { id:89, niche:'food', text:"The reason airplane food tastes bland has nothing to do with the cooking — it's pure physics." },
+  { id:90, niche:'food', text:"Sushi chefs in Japan train for 10 years before they're allowed to touch the fish. Here's what the first 5 years look like." },
+
+  // TRAVEL (10)
+  { id:91, niche:'travel', text:"I traveled to 12 countries last year for under $8,000 total. Here is the exact budget breakdown nobody believes." },
+  { id:92, niche:'travel', text:"There is an entire island that has been untouched by modern civilization. It's illegal to visit — and here's why." },
+  { id:93, niche:'travel', text:"Flight prices drop dramatically if you search on this specific day of the week. Airlines don't want you to know this." },
+  { id:94, niche:'travel', text:"I've been living as a digital nomad for 3 years. These are the 5 things I genuinely wish someone had told me before I started." },
+  { id:95, niche:'travel', text:"This hidden beach in Southeast Asia has zero tourists, zero crowds, and costs almost nothing to reach." },
+  { id:96, niche:'travel', text:"The most dangerous place I've ever visited changed my perspective on safety more than any other experience in my life." },
+  { id:97, niche:'travel', text:"This city is consistently ranked the safest in the world — and it's a place most Westerners have never even considered visiting." },
+  { id:98, niche:'travel', text:"I got bumped to business class for free on 4 different flights last year using this single airport strategy." },
+  { id:99, niche:'travel', text:"Japan has a village where the average age is 87 years old. I spent a week there and I now understand why they live so long." },
+  { id:100, niche:'travel', text:"The most underrated country in the world costs $30 a day to live in comfortably. I can't believe more people don't know about it." },
+
+  // BUSINESS (10)
+  { id:101, niche:'business', text:"This one-person business made $2.3 million last year with no employees, no office, and no physical product." },
+  { id:102, niche:'business', text:"The startup that turned down a $30 million acquisition offer. Two years later, they sold for $400 million." },
+  { id:103, niche:'business', text:"Every successful business I've ever studied solves a problem most people are too embarrassed to admit they have." },
+  { id:104, niche:'business', text:"I analyzed 500 failed businesses and found one thing they all had in common. It's not what most people think." },
+  { id:105, niche:'business', text:"The email that made a founder $1.2 million in 24 hours. He sent it to a list of only 800 people." },
+  { id:106, niche:'business', text:"The real reason 90% of businesses fail is not competition, lack of funding, or bad timing. Here's the actual cause." },
+  { id:107, niche:'business', text:"This obscure business model made a 19-year-old a millionaire. It requires no experience and no startup capital." },
+  { id:108, niche:'business', text:"I built a $10K/month business from scratch in 90 days. Here's the exact week-by-week breakdown of how I did it." },
+  { id:109, niche:'business', text:"Amazon sellers who make over $100K a year all use this one sourcing strategy that beginners never discover on their own." },
+  { id:110, niche:'business', text:"The moment a business stops growing is always caused by the same exact problem. Here's how to spot it before it kills you." },
+
+  // SCIENCE (10)
+  { id:111, niche:'science', text:"This microscopic animal has survived five mass extinctions, including the one that killed the dinosaurs. It cannot be destroyed." },
+  { id:112, niche:'science', text:"Scientists discovered a planet that rains diamonds. The storms there produce diamonds the size of a human fist." },
+  { id:113, niche:'science', text:"Your body completely replaces itself every 7 years — but some cells in your brain have been with you since birth." },
+  { id:114, niche:'science', text:"The human brain processes images in 13 milliseconds. That's 60,000 times faster than your brain processes written words." },
+  { id:115, niche:'science', text:"Quantum entanglement allows two particles to communicate instantly across any distance. Einstein called it 'spooky action' and was disturbed by it." },
+  { id:116, niche:'science', text:"We have mapped less than 20% of the ocean floor. The section we haven't explored is larger than all continents combined." },
+  { id:117, niche:'science', text:"Scientists found bacteria living 2 miles underground that have been completely isolated from sunlight for over 4 million years." },
+  { id:118, niche:'science', text:"There is a star so large that if you placed it where our sun is, it would extend past the orbit of Jupiter." },
+  { id:119, niche:'science', text:"The universe is expanding faster than the speed of light in every direction. This breaks several laws of physics." },
+  { id:120, niche:'science', text:"Scientists have grown a mini human brain in a lab — and detected the first signs of what appears to be dream-like activity." }
+];
+
+const FREE_LIMIT = 10;
+let currentTab = 'all';
+let favorites = new Set();
+let unlockedNiches = new Set(); // will hold unlocked niches after purchase
+
+function getVisibleHooks() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  let hooks = currentTab === 'all' ? HOOKS : HOOKS.filter(h => h.niche === currentTab);
+  if (q) hooks = hooks.filter(h => h.text.toLowerCase().includes(q) || h.niche.includes(q));
+  return hooks;
+}
+
+function renderGrid() {
+  const hooks = getVisibleHooks();
+  const grid = document.getElementById('hookGrid');
+
+  if (hooks.length === 0) {
+    grid.innerHTML = '<div style="color:var(--muted);grid-column:1/-1;text-align:center;padding:48px">No hooks found. Try a different search.</div>';
+    return;
+  }
+
+  // First FREE_LIMIT shown free, rest locked
+  grid.innerHTML = hooks.map((h, i) => {
+    const isFree = i < FREE_LIMIT;
+    const isFav = favorites.has(h.id);
+    return `
+      <div class="card ${!isFree ? 'locked' : ''}" data-id="${h.id}">
+        <div class="card-niche">${nicheLabel(h.niche)}</div>
+        <div class="card-text">${h.text}</div>
+        ${isFree ? `
+          <div class="card-actions">
+            <button class="btn-copy" onclick="copyHook(${h.id}, this)">📋 Copy</button>
+            <button class="btn-heart ${isFav ? 'active' : ''}" onclick="toggleFav(${h.id}, this)">♥</button>
+          </div>
+        ` : `
+          <div class="lock-overlay">
+            <span class="lock-icon">🔒</span>
+            <button class="btn-unlock" onclick="openUnlockModal()">Unlock All Hooks</button>
+          </div>
+        `}
+      </div>
+    `;
+  }).join('');
+}
+
+function nicheLabel(niche) {
+  const map = {
+    fitness:'💪 Fitness', money:'💰 Money', motivation:'🔥 Motivation', ai:'🤖 AI & Tech',
+    relationships:'❤️ Relationships', mindset:'🧠 Mindset', history:'📜 History',
+    mystery:'🔮 Mystery', food:'🍕 Food', travel:'✈️ Travel', business:'📈 Business', science:'🔬 Science'
+  };
+  return map[niche] || niche;
+}
+
+function setTab(niche, el) {
+  currentTab = niche;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderGrid();
+}
+
+function filterHooks() { renderGrid(); }
+
+function copyHook(id, btn) {
+  const hook = HOOKS.find(h => h.id === id);
+  if (!hook) return;
+  navigator.clipboard.writeText(hook.text).then(() => {
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '📋 Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function toggleFav(id, btn) {
+  if (favorites.has(id)) {
+    favorites.delete(id);
+    btn.classList.remove('active');
+  } else {
+    favorites.add(id);
+    btn.classList.add('active');
+  }
+  document.getElementById('favCount').textContent = favorites.size;
+}
+
+function openFavModal() {
+  const modal = document.getElementById('favModal');
+  modal.classList.add('open');
+  const favList = document.getElementById('favList');
+  if (favorites.size === 0) {
+    favList.innerHTML = '<div class="fav-empty">No favorites yet. Click ♥ on any hook to save it here.</div>';
+    return;
+  }
+  const favHooks = HOOKS.filter(h => favorites.has(h.id));
+  favList.innerHTML = favHooks.map(h => `
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-niche">${nicheLabel(h.niche)}</div>
+      <div class="card-text">${h.text}</div>
+      <div class="card-actions">
+        <button class="btn-copy" onclick="copyHook(${h.id}, this)">📋 Copy</button>
+        <button class="btn-heart active" onclick="toggleFav(${h.id}, this); openFavModal()">♥</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function closeFavModal(e) {
+  if (!e || e.target === document.getElementById('favModal') || e.currentTarget === document.querySelector('#favModal .modal-close')) {
+    document.getElementById('favModal').classList.remove('open');
+  }
+}
+
+function openUnlockModal() {
+  document.getElementById('unlockModal').classList.add('open');
+}
+
+function closeUnlockModal(e) {
+  if (!e || e.target === document.getElementById('unlockModal')) {
+    document.getElementById('unlockModal').classList.remove('open');
+  }
+}
+
+function scrollToPricing() {
+  document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Init
+renderGrid();
+</script>
+</body>
+</html>
